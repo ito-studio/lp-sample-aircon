@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
+<!-- このファイルは scripts/build_lp.py で index.src.html から生成。直接編集しない -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>そよかぜ空調クリーニング|エアコンクリーニング(架空の店舗のサンプル)</title>
@@ -76,7 +77,8 @@
   .hero h1 em { font-style: normal; color: var(--yellow); }
   .nw { white-space: nowrap; }
   /* 日本語の文節で折り返す(Chrome・Edge)。Safari向けには主要な箇所を.nwで区切る */
-  p, h1, h2, h3, li, summary, small, th, td { word-break: auto-phrase; text-wrap: pretty; }
+  /* 文節の切れ目(<wbr>、ビルドで挿入)でだけ改行する。iPhoneのSafariを含む全ブラウザで有効 */
+  body { word-break: keep-all; overflow-wrap: anywhere; line-break: strict; }
   .hero-lead { font-size: clamp(15px, 3.8vw, 19px); margin: 0 0 20px; font-weight: 500; }
   .hero-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 22px; padding: 0; list-style: none; max-width: 520px; }
   .hero-chips li { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.4); border-radius: 12px; padding: 10px 6px; text-align: center; font-size: 13px; line-height: 1.4; }
@@ -307,15 +309,15 @@
 </head>
 <body>
 
-<div class="sample-bar">このページは、架空の店舗で作成したLP(ランディングページ)のサンプルです。実在の事業者・料金・連絡先・お客様の声ではありません。</div>
+<div class="sample-bar">この<wbr>ページは、<wbr>架空の<wbr>店舗で<wbr>作成した<wbr>LP(ランディングページ)の<wbr>サンプルです。<wbr>実在の<wbr>事業者・料金・連絡先・<wbr>お客様の<wbr>声ではありません。</div>
 
 <header class="site">
   <div class="wrap">
     <a class="logo maru" href="#top" aria-label="そよかぜ空調クリーニング トップへ">
       <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#2E9BD6"/><path d="M8 13c4-3 8 3 12 0s6-1 6-1M7 18c4-3 8 3 12 0s7-1 7-1M9 23c3-2 6 2 9 0" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
-      そよかぜ空調クリーニング
+      そよかぜ空<wbr>調クリーニング
     </a>
-    <a class="btn header-cta" href="#contact" data-cv="form_cta_click">無料で見積もり</a>
+    <a class="btn header-cta" href="#contact" data-cv="form_cta_click">無料で<wbr>見積もり</a>
   </div>
 </header>
 
@@ -326,16 +328,16 @@
     <div class="ph" data-ph="hero.jpg"><img src="img/hero.jpg" alt="明るいリビングで、スタッフがエアコンを分解して洗浄している様子" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div>
     <div class="wrap">
       <div class="hero-text">
-        <span class="hero-badge">冷房・暖房を使う前に</span>
+        <span class="hero-badge">冷房・暖房を<wbr>使う<wbr>前に</span>
         <h1 id="hero-title" class="maru"><span class="nw">エアコンの<em>中まで</em>、</span><br><span class="nw">すっきり。</span></h1>
-        <p class="hero-lead">使っているうちに、エアコンの中には汚れが溜まりがち。<br>プロが分解して、見えない部分まで洗浄します。</p>
+        <p class="hero-lead">使っている<wbr>うちに、<wbr>エアコンの<wbr>中には<wbr>汚れが<wbr>溜まりがち。<br>プロが<wbr>分解して、<wbr>見えない<wbr>部分まで<wbr>洗浄します。</p>
         <ul class="hero-chips">
-          <li><b>分解</b>して洗浄</li>
-          <li><b>養生</b>で汚さない</li>
+          <li><b>分解</b>して<wbr>洗浄</li>
+          <li><b>養生</b>で<wbr>汚さない</li>
           <li><b>動作確認</b>まで</li>
         </ul>
-        <a class="btn" href="#contact" data-cv="form_cta_click">無料で見積もり <small>1分で入力</small></a>
-        <p class="hero-note">見積もり後のキャンセルも無料です。</p>
+        <a class="btn" href="#contact" data-cv="form_cta_click">無料で<wbr>見積もり <small>1分で<wbr>入力</small></a>
+        <p class="hero-note">見積もり後の<wbr>キャンセルも<wbr>無料です。</p>
       </div>
     </div>
   </section>
@@ -345,15 +347,15 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-en en">CHECK</span>
-        <h2 id="worry-title" class="maru">こんなこと、<br>ありませんか?</h2>
+        <h2 id="worry-title" class="maru">こんな<wbr>こと、<br>ありませんか?</h2>
       </div>
       <div class="worry-grid">
-        <div class="worry-card"><div class="ph" data-ph="worry1.jpg"><img src="img/worry1.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><p>エアコンをつけたら、においが気になった</p></div>
-        <div class="worry-card"><div class="ph" data-ph="worry2.jpg"><img src="img/worry2.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><p>吹き出し口の奥に、黒い点が見える</p></div>
-        <div class="worry-card"><div class="ph" data-ph="worry3.jpg"><img src="img/worry3.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><p>何年も中を掃除していない</p></div>
-        <div class="worry-card"><div class="ph" data-ph="worry4.jpg"><img src="img/worry4.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><p>市販のスプレー、使って大丈夫か不安</p></div>
+        <div class="worry-card"><div class="ph" data-ph="worry1.jpg"><img src="img/worry1.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><p>エアコンを<wbr>つけたら、に<wbr>おいが<wbr>気に<wbr>なった</p></div>
+        <div class="worry-card"><div class="ph" data-ph="worry2.jpg"><img src="img/worry2.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><p>吹き出し口の<wbr>奥に、<wbr>黒い点が<wbr>見える</p></div>
+        <div class="worry-card"><div class="ph" data-ph="worry3.jpg"><img src="img/worry3.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><p>何年も<wbr>中を<wbr>掃除していない</p></div>
+        <div class="worry-card"><div class="ph" data-ph="worry4.jpg"><img src="img/worry4.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><p>市販の<wbr>スプレー、<wbr>使って<wbr>大丈夫か<wbr>不安</p></div>
       </div>
-      <p class="worry-answer maru">その汚れ、<span class="marker">エアコンの中</span>に<br>あるかもしれません。</p>
+      <p class="worry-answer maru">その<wbr>汚れ、<span class="marker">エアコンの<wbr>中</span>に<br>あるかもしれません。</p>
     </div>
   </section>
 
@@ -362,15 +364,15 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-en en">BEFORE / AFTER</span>
-        <h2 id="ba-title" class="maru">外からは見えない部分も、<br>ここまで洗います。</h2>
-        <p>吹き出し口の奥にあるファンは、家庭では外しにくい部品です。</p>
+        <h2 id="ba-title" class="maru">外からは<wbr>見えない<wbr>部分も、<br>ここまで<wbr>洗います。</h2>
+        <p>吹き出し口の<wbr>奥に<wbr>ある<wbr>ファンは、<wbr>家庭では<wbr>外しに<wbr>くい部品です。</p>
       </div>
       <div class="ba-grid">
         <div class="ba-item ba-before"><span class="ba-label">作業前</span><div class="ph" data-ph="before.jpg"><img src="img/before.jpg" alt="作業前の、黒く汚れた吹き出し口の奥のファン" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div></div>
         <div class="ba-item ba-after"><span class="ba-label">作業後</span><div class="ph" data-ph="after.jpg"><img src="img/after.jpg" alt="作業後の、きれいになった吹き出し口の奥のファン" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div></div>
         <div class="ba-arrow" aria-hidden="true">→</div>
       </div>
-      <p class="ba-note">※イメージ写真です(サンプル)。汚れの状態は、エアコンの使い方や年数によって異なります。</p>
+      <p class="ba-note">※イメージ写真です(サンプル)。<wbr>汚れの<wbr>状態は、<wbr>エアコンの<wbr>使い方や<wbr>年数に<wbr>よって<wbr>異なります。</p>
     </div>
   </section>
 
@@ -378,13 +380,13 @@
   <section class="bg-sky" aria-labelledby="reason-title">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-deco">＼ ここが違います ／</span><span class="sec-en en">REASON</span>
-        <h2 id="reason-title" class="maru">そよかぜが<br>選ばれる<span class="c-orange">3つ</span>の理由</h2>
+        <span class="sec-deco">＼ ここが<wbr>違います ／</span><span class="sec-en en">REASON</span>
+        <h2 id="reason-title" class="maru">そよかぜが<br>選ばれる<span class="c-orange">3つ</span>の<wbr>理由</h2>
       </div>
       <div class="reasons">
-        <article class="reason"><div class="ph" data-ph="reason1.jpg"><img src="img/reason1.jpg" alt="エアコンのまわりをシートで保護している様子" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><div class="reason-body"><span class="reason-num en">01</span><h3>壁も床も、<br>まわりを汚さない</h3><p>作業の前に、エアコンのまわりをシートでしっかり覆います。家具の移動が必要なときも、先にご相談します。</p></div></article>
-        <article class="reason"><div class="ph" data-ph="reason2.jpg"><img src="img/reason2.jpg" alt="外したエアコンの部品を洗浄している様子" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><div class="reason-body"><span class="reason-num en">02</span><h3>外せる部品は外して、<br>奥まで洗う</h3><p>カバーや部品を外し、専用の機材で、家庭では届かない奥の部品まで洗浄します。</p></div></article>
-        <article class="reason"><div class="ph" data-ph="reason3.jpg"><img src="img/reason3.jpg" alt="作業後にお客様と一緒に動作を確認している様子" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><div class="reason-body"><span class="reason-num en">03</span><h3>作業の前と後に、<br>動きを一緒に確認</h3><p>洗う前に運転の状態を確かめ、組み立てたあとも、お客様と一緒に運転を確認してから作業を終えます。分解して大丈夫か心配な方も、安心してお任せください。</p></div></article>
+        <article class="reason"><div class="ph" data-ph="reason1.jpg"><img src="img/reason1.jpg" alt="エアコンのまわりをシートで保護している様子" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><div class="reason-body"><span class="reason-num en">01</span><h3>壁も<wbr>床も、<br>まわりを<wbr>汚さない</h3><p>作業の<wbr>前に、<wbr>エアコンの<wbr>まわりを<wbr>シートでしっかり<wbr>覆います。<wbr>家具の<wbr>移動が<wbr>必要な<wbr>ときも、<wbr>先に<wbr>ご相談します。</p></div></article>
+        <article class="reason"><div class="ph" data-ph="reason2.jpg"><img src="img/reason2.jpg" alt="外したエアコンの部品を洗浄している様子" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><div class="reason-body"><span class="reason-num en">02</span><h3>外せる<wbr>部品は<wbr>外して、<br>奥まで<wbr>洗う</h3><p>カバーや<wbr>部品を<wbr>外し、<wbr>専用の<wbr>機材で、<wbr>家庭では<wbr>届かない<wbr>奥の<wbr>部品まで<wbr>洗浄します。</p></div></article>
+        <article class="reason"><div class="ph" data-ph="reason3.jpg"><img src="img/reason3.jpg" alt="作業後にお客様と一緒に動作を確認している様子" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div><div class="reason-body"><span class="reason-num en">03</span><h3>作業の<wbr>前と<wbr>後に、<br>動きを<wbr>一緒に<wbr>確認</h3><p>洗う<wbr>前に<wbr>運転の<wbr>状態を<wbr>確かめ、<wbr>組み立てた<wbr>あとも、<wbr>お客様と<wbr>一緒に<wbr>運転を<wbr>確認してから<wbr>作業を<wbr>終えます。<wbr>分解して<wbr>大丈夫か<wbr>心配な<wbr>方も、<wbr>安心してお任せ<wbr>ください。</p></div></article>
       </div>
     </div>
   </section>
@@ -395,14 +397,14 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-en en">NUMBERS</span>
-        <h2 id="num-title" class="maru">数字で見る、そよかぜ</h2>
+        <h2 id="num-title" class="maru">数字で<wbr>見る、<wbr>そよかぜ</h2>
       </div>
       <div class="numbers">
         <div class="num"><div class="num-label">クリーニング<br>台数</div><div class="num-value">1,200<small>台</small></div></div>
         <div class="num"><div class="num-label">お客様<br>満足度</div><div class="num-value"><span class="c-orange">4.8</span><small>/5</small></div></div>
-        <div class="num"><div class="num-label">また頼みたい<br>と答えた方</div><div class="num-value">92<small>%</small></div></div>
+        <div class="num"><div class="num-label">また<wbr>頼みたい<br>と<wbr>答えた<wbr>方</div><div class="num-value">92<small>%</small></div></div>
       </div>
-      <p class="num-note">※サンプルのための架空の数字です。実際の制作では、依頼者の実際の数字を使い、集計の期間と方法を明記します(例: 2025年1月〜12月の作業後アンケート、回答○○件)。</p>
+      <p class="num-note">※サンプルの<wbr>ための<wbr>架空の<wbr>数字です。<wbr>実際の<wbr>制作では、<wbr>依頼者の<wbr>実際の<wbr>数字を<wbr>使い、<wbr>集計の<wbr>期間と<wbr>方法を<wbr>明記します<wbr>(例: 2025年1月〜12月の<wbr>作業後アンケート、<wbr>回答○○件)。</p>
     </div>
   </section>
 
@@ -411,8 +413,8 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-en en">COMPARE</span>
-        <h2 id="cmp-title" class="maru">自分で掃除するのと、<br>何がちがうの?</h2>
-        <p>フィルターのお手入れは、ご自宅でもできます。違いが出るのは、その奥です。</p>
+        <h2 id="cmp-title" class="maru">自分で<wbr>掃除するのと、<br>何が<wbr>ちがうの?</h2>
+        <p>フィルターの<wbr>お手入れは、<wbr>ご自宅でも<wbr>できます。<wbr>違いが<wbr>出るのは、<wbr>その<wbr>奥です。</p>
       </div>
       <div class="compare-wrap">
         <table class="compare">
@@ -420,14 +422,14 @@
             <tr><th scope="col"></th><th scope="col">自分で<br>掃除</th><th scope="col">市販の<br>スプレー</th><th scope="col" class="ours">そよかぜ</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">奥のファン・<br>熱交換器</th><td><span class="mark ng">×</span><small>手が届かない</small></td><td><span class="mark mid">△</span><small>汚れが奥に<br>残ることも</small></td><td class="ours"><span class="mark ok">◎</span><small>分解して洗浄</small></td></tr>
-            <tr><th scope="row">汚れた水の処理</th><td><span class="mark ng">-</span></td><td><span class="mark mid">△</span><small>内部に<br>残ることも</small></td><td class="ours"><span class="mark ok">◎</span><small>カバーで受けて排水</small></td></tr>
-            <tr><th scope="row">故障の心配</th><td><span class="mark mid">△</span><small>分解は<br>メーカー非推奨</small></td><td><span class="mark mid">△</span><small>使い方に注意が必要</small></td><td class="ours"><span class="mark ok">◎</span><small>作業の前と後に<br>動きを確認</small></td></tr>
-            <tr><th scope="row">手間・時間</th><td><span class="mark mid">△</span><small>自分で作業</small></td><td><span class="mark mid">△</span><small>自分で作業</small></td><td class="ours"><span class="mark ok">◎</span><small>約1〜2.5時間で完了</small></td></tr>
+            <tr><th scope="row">奥の<wbr>ファン・<br>熱交換器</th><td><span class="mark ng">×</span><small>手が<wbr>届かない</small></td><td><span class="mark mid">△</span><small>汚れが<wbr>奥に<br>残る<wbr>ことも</small></td><td class="ours"><span class="mark ok">◎</span><small>分解して<wbr>洗浄</small></td></tr>
+            <tr><th scope="row">汚れた<wbr>水の<wbr>処理</th><td><span class="mark ng">-</span></td><td><span class="mark mid">△</span><small>内部に<br>残る<wbr>ことも</small></td><td class="ours"><span class="mark ok">◎</span><small>カバーで<wbr>受けて<wbr>排水</small></td></tr>
+            <tr><th scope="row">故障の<wbr>心配</th><td><span class="mark mid">△</span><small>分解は<br>メーカー非推奨</small></td><td><span class="mark mid">△</span><small>使い方に<wbr>注意が<wbr>必要</small></td><td class="ours"><span class="mark ok">◎</span><small>作業の<wbr>前と<wbr>後に<br>動きを<wbr>確認</small></td></tr>
+            <tr><th scope="row">手間・時間</th><td><span class="mark mid">△</span><small>自分で<wbr>作業</small></td><td><span class="mark mid">△</span><small>自分で<wbr>作業</small></td><td class="ours"><span class="mark ok">◎</span><small>約1〜2.5時間で<wbr>完了</small></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="compare-note">※比較は一般的な傾向です。市販のスプレーは、製品の説明書とエアコンの取扱説明書にしたがってお使いください。</p>
+      <p class="compare-note">※比較は<wbr>一般的な<wbr>傾向です。<wbr>市販の<wbr>スプレーは、<wbr>製品の<wbr>説明書と<wbr>エアコンの<wbr>取扱説明書に<wbr>したがってお使いください。</p>
     </div>
   </section>
 
@@ -436,12 +438,12 @@
   <section class="mid-cta" aria-label="無料見積もりのご案内">
     <div class="wrap">
       <p class="deco">＼ 見積もり・キャンセル無料 ／</p>
-      <h2 class="maru">まずは、エアコンの台数と<br>タイプを教えてください。</h2>
+      <h2 class="maru">まずは、<wbr>エアコンの<wbr>台数と<br>タイプを<wbr>教えてください。</h2>
       <div class="cta-row">
         <a class="btn btn-tel-big" href="#tel" data-cv="tel_click"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="#F28C28"/></svg> <span>0120-XXX-XXX</span></a>
-        <a class="btn" href="#contact" data-cv="form_cta_click">フォームで見積もり</a>
+        <a class="btn" href="#contact" data-cv="form_cta_click">フォームで<wbr>見積もり</a>
       </div>
-      <small>受付 9:00〜18:00(日曜定休)/番号はサンプルのため伏せています</small>
+      <small>受付 9:00〜18:00(日曜定休)/番号は<wbr>サンプルの<wbr>ため伏せています</small>
     </div>
   </section>
 
@@ -449,13 +451,13 @@
   <section aria-labelledby="promise-title">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-deco">＼ はじめてでも ／</span><span class="sec-en en">PROMISE</span>
-        <h2 id="promise-title" class="maru">はじめての方にも、<br>3つの安心</h2>
+        <span class="sec-deco">＼ はじめてでも<wbr> ／</span><span class="sec-en en">PROMISE</span>
+        <h2 id="promise-title" class="maru">はじめての<wbr>方にも、<br>3つの<wbr>安心</h2>
       </div>
       <div class="promises">
-        <div class="pr"><div class="pr-icon"><svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true"><rect x="5" y="9" width="38" height="30" rx="6" fill="#fff" stroke="#14304F" stroke-width="3"/><path d="M17 16l7 8 7-8M24 24v10M18 25h12M18 30h12" fill="none" stroke="#14304F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="36" r="9" fill="#2BB5A0"/><path d="M34 36l3 3 5-6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>追加料金なし</h3><p>作業の前に金額をお伝えし、ご了承をいただいてから作業します。あとから料金が増えることはありません。</p></div></div>
-        <div class="pr"><div class="pr-icon"><svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true"><path d="M8 15h7l3-5h12l3 5h7a3 3 0 0 1 3 3v18a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V18a3 3 0 0 1 3-3z" fill="#fff" stroke="#14304F" stroke-width="3" stroke-linejoin="round"/><circle cx="24" cy="26" r="7.5" fill="#EAF5FC" stroke="#14304F" stroke-width="3"/><circle cx="24" cy="26" r="3" fill="#2E9BD6"/><circle cx="36.5" cy="20" r="1.8" fill="#F28C28"/></svg></div><div><h3>作業前後を写真で報告</h3><p>どこが、どれくらい汚れていたのかを、写真でお見せします。見えない部分の作業も、きちんと確認できます。</p></div></div>
-        <div class="pr"><div class="pr-icon"><svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true"><path d="M24 5l15 6v11c0 10-6.5 17-15 21C15.5 39 9 32 9 22V11z" fill="#2BB5A0" stroke="#14304F" stroke-width="3" stroke-linejoin="round"/><path d="M17 24l5 5 9-10" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>損害保険に加入</h3><p>作業中に万が一、家財などを傷つけてしまった場合も、保険で対応します(サンプルの記載です)。</p></div></div>
+        <div class="pr"><div class="pr-icon"><svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true"><rect x="5" y="9" width="38" height="30" rx="6" fill="#fff" stroke="#14304F" stroke-width="3"/><path d="M17 16l7 8 7-8M24 24v10M18 25h12M18 30h12" fill="none" stroke="#14304F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="36" r="9" fill="#2BB5A0"/><path d="M34 36l3 3 5-6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>追加料金なし</h3><p>作業の<wbr>前に<wbr>金額を<wbr>お伝えし、<wbr>ご了承を<wbr>いただいてから<wbr>作業します。<wbr>あとから<wbr>料金が<wbr>増える<wbr>ことは<wbr>ありません。</p></div></div>
+        <div class="pr"><div class="pr-icon"><svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true"><path d="M8 15h7l3-5h12l3 5h7a3 3 0 0 1 3 3v18a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V18a3 3 0 0 1 3-3z" fill="#fff" stroke="#14304F" stroke-width="3" stroke-linejoin="round"/><circle cx="24" cy="26" r="7.5" fill="#EAF5FC" stroke="#14304F" stroke-width="3"/><circle cx="24" cy="26" r="3" fill="#2E9BD6"/><circle cx="36.5" cy="20" r="1.8" fill="#F28C28"/></svg></div><div><h3>作業前後を<wbr>写真で<wbr>報告</h3><p>どこが、<wbr>どれくらい<wbr>汚れていたのかを、<wbr>写真で<wbr>お見せします。<wbr>見えない<wbr>部分の<wbr>作業も、<wbr>きちんと<wbr>確認できます。</p></div></div>
+        <div class="pr"><div class="pr-icon"><svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true"><path d="M24 5l15 6v11c0 10-6.5 17-15 21C15.5 39 9 32 9 22V11z" fill="#2BB5A0" stroke="#14304F" stroke-width="3" stroke-linejoin="round"/><path d="M17 24l5 5 9-10" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>損害保険に<wbr>加入</h3><p>作業中に<wbr>万が<wbr>一、<wbr>家財などを<wbr>傷つけてしまった<wbr>場合も、<wbr>保険で<wbr>対応します<wbr>(サンプルの<wbr>記載です)。</p></div></div>
       </div>
     </div>
   </section>
@@ -465,14 +467,14 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-en en">FLOW</span>
-        <h2 id="flow-title" class="maru">クリーニングの流れ</h2>
-        <p>標準タイプは1台あたり約1〜1.5時間、お掃除機能付きは約2〜2.5時間が目安です。</p>
+        <h2 id="flow-title" class="maru">クリーニングの<wbr>流れ</h2>
+        <p>標準タイプは<wbr>1台あたり約1〜1.5時間、<wbr>お掃除機能付きは<wbr>約2〜2.5時間が<wbr>目安です。</p>
       </div>
       <ol class="steps">
-        <li class="step"><div><h3>確認・養生</h3><p>作業前の動きを確かめ、本体とまわりをビニールで保護</p></div></li>
-        <li class="step"><div><h3>分解</h3><p>カバーやフィルターなどを取り外す</p></div></li>
-        <li class="step"><div><h3>高圧洗浄</h3><p>内部を専用の洗剤と機材で洗浄。外した部品も洗う</p></div></li>
-        <li class="step"><div><h3>組み立て・動作確認</h3><p>組み立てて運転を確認し、作業前後の写真をお見せします</p></div></li>
+        <li class="step"><div><h3>確認・養生</h3><p>作業前の<wbr>動きを<wbr>確かめ、<wbr>本体と<wbr>まわりを<wbr>ビニールで<wbr>保護</p></div></li>
+        <li class="step"><div><h3>分解</h3><p>カバーや<wbr>フィルターなどを<wbr>取り外す</p></div></li>
+        <li class="step"><div><h3>高圧洗浄</h3><p>内部を<wbr>専用の<wbr>洗剤と<wbr>機材で<wbr>洗浄。<wbr>外した<wbr>部品も<wbr>洗う</p></div></li>
+        <li class="step"><div><h3>組み立て<wbr>・動作確認</h3><p>組み立てて<wbr>運転を<wbr>確認し、<wbr>作業前後の<wbr>写真を<wbr>お見せします</p></div></li>
       </ol>
     </div>
   </section>
@@ -482,14 +484,14 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-en en">VOICE</span>
-        <h2 id="voice-title" class="maru">お客様の声</h2>
+        <h2 id="voice-title" class="maru">お客様の<wbr>声</h2>
       </div>
       <div class="voices">
-        <div class="voice"><div class="voice-stars" aria-label="5段階中5">★★★★★</div><h3>使い始めのにおいが気にならなくなりました</h3><p>毎年、使い始めの数日がにおっていたのですが、今年は気になりませんでした。作業も丁寧でした。</p><p class="voice-who">30代・女性/壁掛け1台</p></div>
-        <div class="voice"><div class="voice-stars" aria-label="5段階中5">★★★★★</div><h3>まわりを汚さず、安心して任せられました</h3><p>床や壁をしっかり覆ってくれたので、終わったあとの掃除がいりませんでした。</p><p class="voice-who">40代・男性/お掃除機能付き1台</p></div>
-        <div class="voice"><div class="voice-stars" aria-label="5段階中5">★★★★★</div><h3>説明がわかりやすかったです</h3><p>どこが汚れていたのか、写真を見せながら説明してもらえて納得できました。</p><p class="voice-who">60代・女性/壁掛け2台</p></div>
+        <div class="voice"><div class="voice-stars" aria-label="5段階中5">★★★★★</div><h3>使い<wbr>始めのに<wbr>おいが<wbr>気に<wbr>ならなくなりました</h3><p>毎年、<wbr>使い<wbr>始めの<wbr>数日がに<wbr>おって<wbr>いたのですが、<wbr>今年は<wbr>気に<wbr>なりませんでした。<wbr>作業も<wbr>丁寧でした。</p><p class="voice-who">30代・女性/壁掛け1台</p></div>
+        <div class="voice"><div class="voice-stars" aria-label="5段階中5">★★★★★</div><h3>まわりを<wbr>汚さず、<wbr>安心して<wbr>任せられました</h3><p>床や<wbr>壁を<wbr>しっかり<wbr>覆ってくれたので、<wbr>終わった<wbr>あとの<wbr>掃除が<wbr>いりませんでした。</p><p class="voice-who">40代・男性/お掃除機能付き1台</p></div>
+        <div class="voice"><div class="voice-stars" aria-label="5段階中5">★★★★★</div><h3>説明が<wbr>わかりやすかったです</h3><p>どこが<wbr>汚れていたのか、<wbr>写真を<wbr>見せながら<wbr>説明して<wbr>もらえて<wbr>納得できました。</p><p class="voice-who">60代・女性/壁掛け2台</p></div>
       </div>
-      <p class="voice-note">※サンプルのための架空の声です。実際の制作では、ご本人の了承を得た声のみを掲載します。</p>
+      <p class="voice-note">※サンプルの<wbr>ための<wbr>架空の<wbr>声です。<wbr>実際の<wbr>制作では、<wbr>ご本人の<wbr>了承を<wbr>得た<wbr>声のみを<wbr>掲載します。</p>
     </div>
   </section>
 
@@ -498,12 +500,12 @@
   <section class="mid-cta" aria-label="無料見積もりのご案内">
     <div class="wrap">
       <p class="deco">＼ 見積もり・キャンセル無料 ／</p>
-      <h2 class="maru">気になったら、<br>お気軽にご相談ください。</h2>
+      <h2 class="maru">気に<wbr>なったら、<br>お気軽に<wbr>ご相談ください。</h2>
       <div class="cta-row">
         <a class="btn btn-tel-big" href="#tel" data-cv="tel_click"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="#F28C28"/></svg> <span>0120-XXX-XXX</span></a>
-        <a class="btn" href="#contact" data-cv="form_cta_click">フォームで見積もり</a>
+        <a class="btn" href="#contact" data-cv="form_cta_click">フォームで<wbr>見積もり</a>
       </div>
-      <small>受付 9:00〜18:00(日曜定休)/番号はサンプルのため伏せています</small>
+      <small>受付 9:00〜18:00(日曜定休)/番号は<wbr>サンプルの<wbr>ため伏せています</small>
     </div>
   </section>
 
@@ -516,15 +518,15 @@
       </div>
       <div class="prices">
         <div class="price"><h3>壁掛けエアコン<br>(標準タイプ)</h3><div class="price-yen">11,000<small>円〜</small></div><ul><li>分解・高圧洗浄</li><li>養生・動作確認</li></ul></div>
-        <div class="price pop"><span class="price-tag">ご依頼の多いプラン</span><h3>お掃除機能付き<br>エアコン</h3><div class="price-yen">19,800<small>円〜</small></div><ul><li>分解・高圧洗浄</li><li>お掃除ユニットの洗浄</li><li>養生・動作確認</li></ul></div>
-        <div class="price"><h3>室外機の洗浄<br>(追加)</h3><div class="price-yen">4,400<small>円</small></div><ul><li>室外機のまわりの洗浄</li></ul></div>
+        <div class="price pop"><span class="price-tag">ご依頼の<wbr>多い<wbr>プラン</span><h3>お掃除機能付き<br>エアコン</h3><div class="price-yen">19,800<small>円〜</small></div><ul><li>分解・高圧洗浄</li><li>お掃除ユニットの<wbr>洗浄</li><li>養生・動作確認</li></ul></div>
+        <div class="price"><h3>室外機の<wbr>洗浄<br>(追加)</h3><div class="price-yen">4,400<small>円</small></div><ul><li>室外機の<wbr>まわりの<wbr>洗浄</li></ul></div>
       </div>
       <ul class="price-notes">
-        <li>表示はすべて消費税込みの金額です。</li>
-        <li>機種や設置場所によって変わる場合は、作業の前に金額をお伝えし、ご了承をいただいてから作業します。</li>
-        <li>※架空の店舗のサンプルのため、実際の料金ではありません。</li>
+        <li>表示は<wbr>すべて<wbr>消費税込みの<wbr>金額です。</li>
+        <li>機種や<wbr>設置場所に<wbr>よって<wbr>変わる<wbr>場合は、<wbr>作業の<wbr>前に<wbr>金額を<wbr>お伝えし、<wbr>ご了承を<wbr>いただいてから<wbr>作業します。</li>
+        <li>※架空の<wbr>店舗の<wbr>サンプルの<wbr>ため、<wbr>実際の<wbr>料金ではありません。</li>
       </ul>
-      <p class="promise"><span class="nw">作業の前にお伝えした金額から、</span><span class="nw">あとで追加料金を</span><span class="nw">いただくことはありません。</span></p>
+      <p class="promise"><span class="nw">作業の<wbr>前に<wbr>お伝えした<wbr>金額から、</span><span class="nw">あとで<wbr>追加料金を</span><span class="nw">いただく<wbr>ことは<wbr>ありません。</span></p>
     </div>
   </section>
 
@@ -534,10 +536,10 @@
       <div class="ph" data-ph="staff.jpg"><img src="img/staff.jpg" alt="代表スタッフの写真" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div>
       <div>
         <span class="sec-en en">MESSAGE</span>
-        <h2 id="greeting-title" class="maru">ご自宅にうかがう仕事だから、<br>「安心」をいちばんに。</h2>
-        <p>エアコンクリーニングは、<span class="nw">お客様のご自宅に</span><span class="nw">入らせていただく仕事です。</span>だからこそ、<span class="nw">作業の前の説明と、</span><span class="nw">まわりを汚さない養生を</span><span class="nw">大切にしています。</span></p>
-        <p><span class="nw">気になることは、</span><span class="nw">どんな小さなことでも</span><span class="nw">お聞きください。</span></p>
-        <p class="sign">そよかぜ空調クリーニング 代表(サンプル)</p>
+        <h2 id="greeting-title" class="maru">ご自宅に<wbr>うかが<wbr>う仕事だから、<br>「安心」を<wbr>いちばんに。</h2>
+        <p>エアコンクリーニングは、<span class="nw">お客様の<wbr>ご自宅に</span><span class="nw">入らせていただく<wbr>仕事です。</span>だからこそ、<span class="nw">作業の<wbr>前の<wbr>説明と、</span><span class="nw">まわりを<wbr>汚さない<wbr>養生を</span><span class="nw">大切に<wbr>しています。</span></p>
+        <p><span class="nw">気に<wbr>なる<wbr>ことは、</span><span class="nw">どんな<wbr>小さな<wbr>ことでも</span><span class="nw">お聞きください。</span></p>
+        <p class="sign">そよかぜ空<wbr>調クリーニング 代表(サンプル)</p>
       </div>
     </div>
   </section>
@@ -547,13 +549,13 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-en en">FAQ</span>
-        <h2 id="faq-title" class="maru">よくある質問</h2>
+        <h2 id="faq-title" class="maru">よく<wbr>ある<wbr>質問</h2>
       </div>
       <div class="faq">
-        <details><summary>時間はどれくらいかかりますか?</summary><p>標準タイプは1台あたり約1〜1.5時間、お掃除機能付きは約2〜2.5時間が目安です。機種によって前後します。</p></details>
-        <details><summary>当日、準備しておくことはありますか?</summary><p>エアコンの下に、作業用のスペース(1mほど)を空けておいてください。</p></details>
-        <details><summary>立ち会いは必要ですか?</summary><p>作業の始めと終わり(動作の確認)に、お立ち会いをお願いしています。</p></details>
-        <details><summary>支払い方法は?</summary><p>現金のほか、各種キャッシュレス決済に対応しています(サンプルの記載です)。</p></details>
+        <details><summary>時間は<wbr>どれくらい<wbr>かかりますか?</summary><p>標準タイプは<wbr>1台あたり約1〜1.5時間、<wbr>お掃除機能付きは<wbr>約2〜2.5時間が<wbr>目安です。<wbr>機種に<wbr>よって<wbr>前後します。</p></details>
+        <details><summary>当日、<wbr>準備しておく<wbr>ことは<wbr>ありますか?</summary><p>エアコンの<wbr>下に、<wbr>作業用の<wbr>スペース(1mほど<wbr>)を<wbr>空けて<wbr>おいてください。</p></details>
+        <details><summary>立ち会いは<wbr>必要ですか?</summary><p>作業の<wbr>始めと<wbr>終わり<wbr>(動作の<wbr>確認)に、<wbr>お立ち会いを<wbr>お願いしています。</p></details>
+        <details><summary>支払い<wbr>方法は<wbr>?</summary><p>現金の<wbr>ほか、<wbr>各種キャッシュレス決済に<wbr>対応しています(サンプルの<wbr>記載です)。</p></details>
       </div>
     </div>
   </section>
@@ -562,13 +564,13 @@
   <section class="cta-band" aria-labelledby="cta-title">
     <div class="ph" data-ph="cta.jpg"><img src="img/cta.jpg" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div>
     <div class="wrap">
-      <h2 id="cta-title" class="maru">本格的に使う季節の前に、<br>まずは無料で見積もり。</h2>
-      <p>○○市・△△市とその周辺に対応(サンプルのため地名は伏せています)</p>
+      <h2 id="cta-title" class="maru">本格的に<wbr>使う<wbr>季節の<wbr>前に、<br>まずは<wbr>無料で<wbr>見積もり。</h2>
+      <p>○○市・△△市と<wbr>その<wbr>周辺に<wbr>対応(サンプルの<wbr>ため地名は<wbr>伏せています)</p>
       <div class="cta-row" id="tel">
         <a class="btn btn-tel-big" href="#tel" data-cv="tel_click"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="#F28C28"/></svg> <span>0120-XXX-XXX</span></a>
-        <a class="btn" href="#contact" data-cv="form_cta_click">フォームで見積もり</a>
+        <a class="btn" href="#contact" data-cv="form_cta_click">フォームで<wbr>見積もり</a>
       </div>
-      <p style="font-size:13px;margin:12px 0 0;opacity:.85">受付 9:00〜18:00(日曜定休)/番号はサンプルのため伏せています</p>
+      <p style="font-size:13px;margin:12px 0 0;opacity:.85">受付 9:00〜18:00(日曜定休)/番号は<wbr>サンプルの<wbr>ため伏せています</p>
     </div>
   </section>
 
@@ -577,18 +579,18 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-en en">CONTACT</span>
-        <h2 id="contact-title" class="maru">無料で見積もり</h2>
-        <p>入力は1分ほどです。2営業日以内にご連絡します(サンプルの記載です)。</p>
+        <h2 id="contact-title" class="maru">無料で<wbr>見積もり</h2>
+        <p>入力は<wbr>1分ほどです。<wbr>2営業日以内に<wbr>ご連絡します<wbr>(サンプルの<wbr>記載です)。</p>
       </div>
       <form class="form" onsubmit="window.dataLayer.push({event:'form_submit'}); alert('サンプルのため、送信はされません。'); return false;">
         <label><span>お名前<span class="req">必須</span></span><input type="text" name="name" autocomplete="name" placeholder="例)そよかぜ 花子"></label>
-        <label><span>電話番号またはメールアドレス<span class="req">必須</span></span><input type="text" name="contact" autocomplete="email" placeholder="例)example@example.com"></label>
-        <label>エアコンの台数とタイプ
+        <label><span>電話番号または<wbr>メールアドレス<span class="req">必須</span></span><input type="text" name="contact" autocomplete="email" placeholder="例)example@example.com"></label>
+        <label>エアコンの<wbr>台数と<wbr>タイプ
           <select name="type"><option>壁掛け(標準)1台</option><option>壁掛け(標準)2台以上</option><option>お掃除機能付き</option><option>わからない</option></select>
         </label>
-        <label>ご希望の日時・ご質問<textarea name="message" placeholder="例)来週の土曜日の午前が希望です"></textarea></label>
-        <p class="form-note">いただいた情報は、見積もりのご連絡にのみ使用します。<br>※サンプルのため、このフォームは送信されません。実際の制作では、<span class="nw">外部のフォームサービス</span><span class="nw">(Googleフォーム等)</span>を使い、<span class="nw">個人情報を</span><span class="nw">サイトのサーバーに</span><span class="nw">保存しない構成にします。</span></p>
-        <button class="btn" type="submit">見積もりを依頼する</button>
+        <label>ご希望の<wbr>日時・ご質問<textarea name="message" placeholder="例)来週の土曜日の午前が希望です"></textarea></label>
+        <p class="form-note">いただいた<wbr>情報は、<wbr>見積もりの<wbr>ご連絡にのみ<wbr>使用します。<br>※サンプルの<wbr>ため、<wbr>この<wbr>フォームは<wbr>送信されません。<wbr>実際の<wbr>制作では、<span class="nw">外部の<wbr>フォームサービス</span><span class="nw">(Googleフォーム等)</span>を<wbr>使い、<span class="nw">個人情報を</span><span class="nw">サイトの<wbr>サーバーに</span><span class="nw">保存しない<wbr>構成にします。</span></p>
+        <button class="btn" type="submit">見積もりを<wbr>依頼する</button>
       </form>
     </div>
   </section>
@@ -598,17 +600,17 @@
 <footer>
   <div class="wrap">
     <dl>
-      <dt>店名</dt><dd>そよかぜ空調クリーニング(架空)</dd>
+      <dt>店名</dt><dd>そよかぜ空<wbr>調クリーニング(架空)</dd>
       <dt>所在地</dt><dd>○○県○○市(サンプル)</dd>
       <dt>営業時間</dt><dd>9:00〜18:00(日曜定休)</dd>
     </dl>
-    <p class="footer-note">このページは、LP制作のサンプルとして架空の店舗で作成したものです。<span class="nw">店名・料金・連絡先・</span><span class="nw">地名・お客様の声は</span><span class="nw">実在のものではありません。</span><span class="nw">写真はイメージです。</span></p>
+    <p class="footer-note">この<wbr>ページは、<wbr>LP制作の<wbr>サンプルとして<wbr>架空の<wbr>店舗で<wbr>作成した<wbr>ものです。<span class="nw">店名・料金・連絡先・</span><span class="nw">地名・<wbr>お客様の<wbr>声は</span><span class="nw">実在の<wbr>ものではありません。</span><span class="nw">写真は<wbr>イメージです。</span></p>
   </div>
 </footer>
 
 <div class="fixed-cta">
-  <a class="btn btn-tel" href="#tel" data-cv="tel_click">電話で相談</a>
-  <a class="btn" href="#contact" data-cv="form_cta_click">無料で見積もり</a>
+  <a class="btn btn-tel" href="#tel" data-cv="tel_click">電話で<wbr>相談</a>
+  <a class="btn" href="#contact" data-cv="form_cta_click">無料で<wbr>見積もり</a>
 </div>
 
 <script>
