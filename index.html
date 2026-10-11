@@ -75,6 +75,8 @@
   .hero h1 { font-size: clamp(36px, 9vw, 68px); line-height: 1.25; margin: 14px 0 12px; font-weight: 900; letter-spacing: .02em; text-shadow: 0 2px 16px rgba(0,0,0,.25); }
   .hero h1 em { font-style: normal; color: var(--yellow); }
   .nw { white-space: nowrap; }
+  /* 日本語の文節で折り返す(Chrome・Edge)。Safari向けには主要な箇所を.nwで区切る */
+  p, h1, h2, h3, li, summary, small, th, td { word-break: auto-phrase; text-wrap: pretty; }
   .hero-lead { font-size: clamp(15px, 3.8vw, 19px); margin: 0 0 20px; font-weight: 500; }
   .hero-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 22px; padding: 0; list-style: none; max-width: 520px; }
   .hero-chips li { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.4); border-radius: 12px; padding: 10px 6px; text-align: center; font-size: 13px; line-height: 1.4; }
@@ -522,7 +524,7 @@
         <li>機種や設置場所によって変わる場合は、作業の前に金額をお伝えし、ご了承をいただいてから作業します。</li>
         <li>※架空の店舗のサンプルのため、実際の料金ではありません。</li>
       </ul>
-      <p class="promise">作業の前にお伝えした金額から、あとで追加料金をいただくことはありません。</p>
+      <p class="promise"><span class="nw">作業の前にお伝えした金額から、</span><span class="nw">あとで追加料金を</span><span class="nw">いただくことはありません。</span></p>
     </div>
   </section>
 
@@ -533,8 +535,8 @@
       <div>
         <span class="sec-en en">MESSAGE</span>
         <h2 id="greeting-title" class="maru">ご自宅にうかがう仕事だから、<br>「安心」をいちばんに。</h2>
-        <p>エアコンクリーニングは、お客様のご自宅に入らせていただく仕事です。だからこそ、作業の前の説明と、まわりを汚さない養生を大切にしています。</p>
-        <p>気になることは、どんな小さなことでもお聞きください。</p>
+        <p>エアコンクリーニングは、<span class="nw">お客様のご自宅に</span><span class="nw">入らせていただく仕事です。</span>だからこそ、<span class="nw">作業の前の説明と、</span><span class="nw">まわりを汚さない養生を</span><span class="nw">大切にしています。</span></p>
+        <p><span class="nw">気になることは、</span><span class="nw">どんな小さなことでも</span><span class="nw">お聞きください。</span></p>
         <p class="sign">そよかぜ空調クリーニング 代表(サンプル)</p>
       </div>
     </div>
@@ -585,7 +587,7 @@
           <select name="type"><option>壁掛け(標準)1台</option><option>壁掛け(標準)2台以上</option><option>お掃除機能付き</option><option>わからない</option></select>
         </label>
         <label>ご希望の日時・ご質問<textarea name="message" placeholder="例)来週の土曜日の午前が希望です"></textarea></label>
-        <p class="form-note">いただいた情報は、見積もりのご連絡にのみ使用します。<br>※サンプルのため、このフォームは送信されません。実際の制作では、外部のフォームサービス(Googleフォーム等)を使い、個人情報をサイトのサーバーに保存しない構成にします。</p>
+        <p class="form-note">いただいた情報は、見積もりのご連絡にのみ使用します。<br>※サンプルのため、このフォームは送信されません。実際の制作では、<span class="nw">外部のフォームサービス</span><span class="nw">(Googleフォーム等)</span>を使い、<span class="nw">個人情報を</span><span class="nw">サイトのサーバーに</span><span class="nw">保存しない構成にします。</span></p>
         <button class="btn" type="submit">見積もりを依頼する</button>
       </form>
     </div>
@@ -600,7 +602,7 @@
       <dt>所在地</dt><dd>○○県○○市(サンプル)</dd>
       <dt>営業時間</dt><dd>9:00〜18:00(日曜定休)</dd>
     </dl>
-    <p class="footer-note">このページは、LP制作のサンプルとして架空の店舗で作成したものです。店名・料金・連絡先・地名・お客様の声は実在のものではありません。写真はイメージです。</p>
+    <p class="footer-note">このページは、LP制作のサンプルとして架空の店舗で作成したものです。<span class="nw">店名・料金・連絡先・</span><span class="nw">地名・お客様の声は</span><span class="nw">実在のものではありません。</span><span class="nw">写真はイメージです。</span></p>
   </div>
 </footer>
 
